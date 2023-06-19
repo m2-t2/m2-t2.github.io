@@ -104,7 +104,7 @@ class VideoHandler {
 }
 
 window.onload = function() {
-	handler = new VideoHandler(2, 2, "scene", "btn", "vid");
+	handler = new VideoHandler(4, 2, "scene", "btn", "vid");
 	handler.register();
 	handler.play_video();
 }
