@@ -73,10 +73,16 @@
     <div class="container">
       <center><h2 class="sectitle">Network Architecture</h2></center>
       <p class="text">
-        M2T2 uses cross-attention between learned embeddings and multi-scale point cloud features to produce per-point contact masks, indicating where to make contact for picking and placing actions.
+        M2T2 uses cross-attention between learned embeddings and multi-scale point cloud features to produce per-point contact masks, indicating where to make contact for picking and placing actions. Our general pick-and-place network produces G object-specific grasping masks, 1 for each graspable object in the scene, and P orientation-specific placement masks, 1 for each discretized planar rotation. 6-DoF gripper poses are then reconstructed using the contact masks and the point cloud.
       </p>
       <div class="container">
         <img src="images/network.png"></img>
+      </div>
+      <p class="text">
+        M2T2 can also take other conditional inputs (e.g. language goal) to predict task-specific grasps/placements. Below is the architecture for M2T2 trained on RLBench, which is conditioned on language tokens embedded by a pretrained CLIP model.
+      </p>
+      <div class="container">
+        <img src="images/rlbench_network.png"></img>
       </div>
     </div>
 
