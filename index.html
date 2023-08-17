@@ -26,12 +26,18 @@
       <h1 class="subtitle">for Object-centric Pick and Place</h1>
     </center>
 
+    <div class="container grey_container">
+      <p class="text">
+        Dear reviewers, to provide context to the rebuttal, please checkout the updated <a href="#network">network architecture figures</a>, <a href="#comparison">comparison against single-task models</a> and <a href="#video">real-world evaluation videos</a>, especially scene 5, 6, 7 for long-horizon tasks.
+      </p>
+    </div>
+
     <div class="container">
-      <div class="container widget_container">
+      <!-- <div class="container widget_container">
         <video controls loop autoplay muted playsinline class="on">
           <source src="videos/scene1_ours.mp4" type="video/mp4"/>
         </video>
-      </div>
+      </div> -->
       <div class="container">
         <p class="text">
           M2T2 is a unified transformer model for picking and placing. From a raw 3D point cloud, M2T2 predicts 6-DoF grasps for each object on the table and orientation-aware placements for the object holded by the robot.
@@ -40,7 +46,7 @@
       </div>
     </div>
 
-    <div class="container grey_container">
+    <div class="container grey_container" id="video">
       <center><h2 class="sectitle">Real-world Pick-and-place</h2></center>
       <p class="text">
         M2T2 achieves zero-shot Sim2Real transfer for picking and placing unknown objects, outperforming a baseline system consisting of state-of-the-art task-specific methods by 19% in success rate. 
@@ -70,7 +76,7 @@
       </div>
     </div>
 
-    <div class="container">
+    <div class="container" id="network">
       <center><h2 class="sectitle">Network Architecture</h2></center>
       <p class="text">
         M2T2 uses cross-attention between learned embeddings and multi-scale point cloud features to produce per-point contact masks, indicating where to make contact for picking and placing actions. Our general pick-and-place network produces G object-specific grasping masks, 1 for each graspable object in the scene, and P orientation-specific placement masks, 1 for each discretized planar rotation. 6-DoF gripper poses are then reconstructed using the contact masks and the point cloud.
@@ -86,8 +92,21 @@
       </div>
     </div>
 
-    <div class="container" class="grey_container">
-      <center><h2 class="sectitle">Citation</h2></center>
+    <div class="container grey_container" id="comparison">
+      <center><h2 class="sectitle">Comparison Against Single-task Models</h2></center>
+      <p class="text">
+        We have trained M2T2 to only perform a single task: grasping or placing. Although these task-specialized models outperform the baselines, they are still worse than our multi-task model. This shows that it is important to formulate both picking and placing under the same framework. 
+      </p>
+      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
+      <tr>
+      <td width=50%" align="left" valign="middle">
+        <img src="images/multi-task_vs_pick.png"></img>
+      </td>
+      <td width=50%" align="right" valign="middle">
+        <img src="images/multi-task_vs_place.png"></img>
+      </td>
+      </tr>
+      </table>
     </div>
 
   </body>
