@@ -104,7 +104,10 @@ class VideoHandler {
 }
 
 window.onload = function() {
-	handler = new VideoHandler(7, 2, "scene", "btn", "vid");
+	handler = new VideoHandler(7, 2, "scene", "method", "video");
 	handler.register();
 	handler.play_video();
+	rlbench_handler = new VideoHandler(3, 5, "task", "seed", "demo");
+	rlbench_handler.register();
+	rlbench_handler.play_video();
 }

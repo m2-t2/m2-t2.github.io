@@ -28,7 +28,7 @@
 
     <div class="container grey_container">
       <p class="text">
-        Dear reviewers, to provide context to the rebuttal, please checkout the updated <a href="#network">network architecture figures</a>, <a href="#comparison">comparison against single-task models</a> and <a href="#video">real-world evaluation videos</a>, especially scene 5, 6, 7 for long-horizon tasks.
+        Dear reviewers, to provide context to the rebuttal, please checkout the <a href="#rlbench">evaluation on RLBench</a>, <a href="#network">updated network architecture figures</a>, <a href="#comparison">comparison against single-task models</a> and <a href="#video">real-world evaluation videos</a>, especially scene 5, 6, 7 for long-horizon tasks.
       </p>
     </div>
 
@@ -62,14 +62,14 @@
           <button id="scene6" value="scene7">Scene 7</button>
         </div>
         <div class="buttons">
-          <button id="btn0" value="ours" class="on">M2T2</button>
-          <button id="btn1" value="baseline">Contact-GraspNet + CabiNet</button>
+          <button id="method0" value="ours" class="on">M2T2</button>
+          <button id="method1" value="baseline">Contact-GraspNet + CabiNet</button>
         </div>
         <div class="container video_container">
-          <video id="vid0" controls loop muted playsinline class="on">
+          <video id="video0" controls loop muted playsinline class="on">
             <source src="videos/scene1_ours.mp4" type="video/mp4"/>
           </video>
-          <video id="vid1" controls loop muted playsinline>
+          <video id="video1" controls loop muted playsinline>
             <source src="videos/scene1_baseline.mp4" type="video/mp4"/>
           </video>
         </div>
@@ -92,7 +92,45 @@
       </div>
     </div>
 
-    <div class="container grey_container" id="comparison">
+    <div class="container grey_container" id="rlbench">
+      <center><h2 class="sectitle">RLBench</h2></center>
+      <p class="text">
+        M2T2 can perform various complex tasks with a single model by decomposing the task into pick-and-place sequences. Below are some examples from the evaluation on RLBench. M2T2 achieves 89.3%, 88.0%, 86.7% success rate on open drawer, turn tap and meet off grill respectively, whereas PerAct, a state-of-the-art multi-task model, achieves 80%, 80%, 84%.
+      </p>
+      <div class="container widget_container">
+        <div class="buttons">
+          <button id="task0" value="meat_off_grill" class="on">meat_off_grill</button>
+          <button id="task1" value="open_drawer">open_drawer</button>
+          <button id="task2" value="turn_tap">turn_tap</button>
+        </div>
+        <div class="buttons">
+          <button id="seed0" value="s0" class="on">seed 0</button>
+          <button id="seed1" value="s1">seed 1</button>
+          <button id="seed2" value="s2">seed 2</button>
+          <button id="seed3" value="s3">seed 3</button>
+          <button id="seed4" value="s4">seed 4</button>
+        </div>
+        <div class="container video_container">
+          <video id="demo0" controls loop muted playsinline class="on">
+            <source src="videos/meat_off_grill_s0.mp4" type="video/mp4"/>
+          </video>
+          <video id="demo1" controls loop muted playsinline>
+            <source src="videos/meat_off_grill_s1.mp4" type="video/mp4"/>
+          </video>
+          <video id="demo2" controls loop muted playsinline>
+            <source src="videos/meat_off_grill_s2.mp4" type="video/mp4"/>
+          </video>
+          <video id="demo3" controls loop muted playsinline>
+            <source src="videos/meat_off_grill_s3.mp4" type="video/mp4"/>
+          </video>
+          <video id="demo4" controls loop muted playsinline>
+            <source src="videos/meat_off_grill_s4.mp4" type="video/mp4"/>
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <div class="container container" id="comparison">
       <center><h2 class="sectitle">Comparison Against Single-task Models</h2></center>
       <p class="text">
         We have trained M2T2 to only perform a single task: grasping or placing. Although these task-specialized models outperform the baselines, they are still worse than our multi-task model. This shows that it is important to formulate both picking and placing under the same framework. 
