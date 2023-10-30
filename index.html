@@ -26,24 +26,57 @@
       <h1 class="subtitle">for Object-centric Pick and Place</h1>
     </center>
 
-    <div class="container grey_container">
-      <p class="text">
-        Dear reviewers, to provide context to the rebuttal, please checkout the <a href="#rlbench">evaluation on RLBench</a>, <a href="#network">updated network architecture figures</a>, <a href="#comparison">comparison against single-task models</a> and <a href="#video">real-world evaluation videos</a>, especially scene 5, 6, 7 for long-horizon tasks.
-      </p>
-    </div>
+    <br>
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=120px>
+          <center>
+            <span class="text"><a href="https://wentaoyuan.github.io">Wentao Yuan</a><sup>1</sup></span>
+          </center>
+        </td>
+        <td align=center width=120px>
+          <center>
+            <span class="text"><a href="http://adithyamurali.com">Adithya Murali</a><sup>2*</sup></span>
+          </center>
+        </td>
+        <td align=center width=120px>
+          <center>
+            <span class="text"><a href="https://research.nvidia.com/person/arsalan-mousavian">Arsalan Mousavian</a><sup>2*</sup></span>
+          </center>
+        </td>
+        <td align=center width=120px>
+          <center>
+            <span class="text"><a href="https://homes.cs.washington.edu/~fox">Dieter Fox</a><sup>1,2</sup></span>
+          </center>
+        </td>
+      </tr>
+    </table>
+
+    <table align=center width=700px>
+      <tr>
+        <td align=center width=100px>
+          <center>
+            <span class="text"><sup>1</sup>University of Washington</span>
+          </center>
+        </td>
+        <td align=center width=100px>
+          <center>
+            <span class="text"><sup>2</sup>NVIDIA</span>
+          </center>
+        </td>
+      </tr>
+    </table>
 
     <div class="container">
-      <!-- <div class="container widget_container">
-        <video controls loop autoplay muted playsinline class="on">
-          <source src="videos/scene1_ours.mp4" type="video/mp4"/>
+      <div class="container widget_container">
+        <video controls playsinline class="on">
+          <source src="videos/spotlight.mp4" type="video/mp4"/>
         </video>
-      </div> -->
-      <div class="container">
-        <p class="text">
-          M2T2 is a unified transformer model for picking and placing. From a raw 3D point cloud, M2T2 predicts 6-DoF grasps for each object on the table and orientation-aware placements for the object holded by the robot.
-        </p>
-        <img src="images/teaser.png"></img>
       </div>
+      <p class="text">
+        M2T2 is a unified transformer model for picking and placing. From a raw 3D point cloud, M2T2 predicts 6-DoF grasps for each object on the table and orientation-aware placements for the object holded by the robot.
+      </p>
+      <img src="images/teaser.png"></img>
     </div>
 
     <div class="container grey_container" id="video">
