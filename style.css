@@ -26,6 +26,18 @@
     margin-bottom:10px;
 }
 
+.author{
+    font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size:24px;
+    font-weight:400;
+    line-height:22px;
+    margin-top:5px;
+    margin-bottom:10px;
+    padding-left:25px;
+    padding-right:25px;
+    text-align:justify;
+}
+
 .text{
     font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size:20px;
@@ -70,7 +82,7 @@
     width: 100%;
 }
 
-.citation{
+.citation {
     background-color:#e6e6e6;
     font-family:"Lucida Console", monospace, sans-serif;
     font-size:14px;
@@ -78,7 +90,7 @@
     padding-bottom:25px;
 }
 
-img{
+img {
     max-width: 100%;
     height: auto;
 }
@@ -109,8 +121,7 @@ video.on {
 	display: block;
 }
 
-a:link,a:visited
-{
+a:link,a:visited {
     color: #1367a7;
     text-decoration: none;
 }

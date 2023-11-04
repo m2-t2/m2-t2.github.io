@@ -31,22 +31,22 @@
       <tr>
         <td align=center width=120px>
           <center>
-            <span class="text"><a href="https://wentaoyuan.github.io">Wentao Yuan</a><sup>1</sup></span>
+            <span class="author"><a href="https://wentaoyuan.github.io">Wentao Yuan</a><sup>1</sup></span>
           </center>
         </td>
         <td align=center width=120px>
           <center>
-            <span class="text"><a href="http://adithyamurali.com">Adithya Murali</a><sup>2*</sup></span>
+            <span class="author"><a href="http://adithyamurali.com">Adithya Murali</a><sup>2*</sup></span>
           </center>
         </td>
         <td align=center width=120px>
           <center>
-            <span class="text"><a href="https://research.nvidia.com/person/arsalan-mousavian">Arsalan Mousavian</a><sup>2*</sup></span>
+            <span class="author"><a href="https://research.nvidia.com/person/arsalan-mousavian">Arsalan Mousavian</a><sup>2*</sup></span>
           </center>
         </td>
         <td align=center width=120px>
           <center>
-            <span class="text"><a href="https://homes.cs.washington.edu/~fox">Dieter Fox</a><sup>1,2</sup></span>
+            <span class="author"><a href="https://homes.cs.washington.edu/~fox">Dieter Fox</a><sup>1,2</sup></span>
           </center>
         </td>
       </tr>
@@ -56,18 +56,34 @@
       <tr>
         <td align=center width=100px>
           <center>
-            <span class="text"><sup>1</sup>University of Washington</span>
+            <span class="author"><sup>1</sup>University of Washington</span>
           </center>
         </td>
         <td align=center width=100px>
           <center>
-            <span class="text"><sup>2</sup>NVIDIA</span>
+            <span class="author"><sup>2</sup>NVIDIA</span>
           </center>
         </td>
       </tr>
     </table>
 
     <div class="container">
+      <table align=center width=60%>
+        <tr>
+          <td align=center width=50%>
+            <center>
+              <img class="layered-paper" width=12% src="images/page1.png"/>
+              <p class="sectitle"><a href="https://arxiv.org/abs/2311.00926">Paper</a></p>
+            </center>
+          </td>
+          <td align=center width=50%>
+            <center>
+              <img width=20% src="images/github.png"/>
+              <p class="sectitle"><a href="https://github.com/NVlabs/M2T2">Code</a></p>
+            </center>
+          </td>
+        </tr>
+      </table>
       <div class="container widget_container">
         <video controls playsinline class="on">
           <source src="videos/spotlight.mp4" type="video/mp4"/>
@@ -84,7 +100,7 @@
       <p class="text">
         M2T2 achieves zero-shot Sim2Real transfer for picking and placing out-of-distribution objects, outperforming a baseline system consisting of state-of-the-art task-specific methods by 19% in success rate. 
       </p>
-      <div class="container widget_container">
+      <div class="container widget_container" load="lazy">
         <div class="buttons">
           <button id="scene0" value="scene1" class="on">Scene 1</button>
           <button id="scene1" value="scene2">Scene 2</button>
@@ -130,7 +146,7 @@
       <p class="text">
         M2T2 can perform various complex tasks with a single model by decomposing the task into pick-and-place sequences. Below are some examples from the evaluation on RLBench. M2T2 achieves 89.3%, 88.0%, 86.7% success rate on open drawer, turn tap and meet off grill respectively, whereas PerAct, a state-of-the-art multi-task model, achieves 80%, 80%, 84%.
       </p>
-      <div class="container widget_container">
+      <div class="container widget_container" load="lazy">
         <div class="buttons">
           <button id="task0" value="meat_off_grill" class="on">meat_off_grill</button>
           <button id="task1" value="open_drawer">open_drawer</button>
@@ -163,21 +179,16 @@
       </div>
     </div>
 
-    <div class="container container" id="comparison">
-      <center><h2 class="sectitle">Comparison Against Single-task Models</h2></center>
-      <p class="text">
-        We have trained M2T2 to only perform a single task: grasping or placing. Although these task-specialized models outperform the baselines, they are still worse than our multi-task model. This shows that it is important to formulate both picking and placing under the same framework. 
-      </p>
-      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
-      <tr>
-      <td width=50%" align="left" valign="middle">
-        <img src="images/multi-task_vs_pick.png"></img>
-      </td>
-      <td width=50%" align="right" valign="middle">
-        <img src="images/multi-task_vs_place.png"></img>
-      </td>
-      </tr>
-      </table>
+    <div class="container">
+      <center><h2 class="sectitle">Citation</h2></center>
+      <div class="text citation">
+        @inproceedings{yuan2023m2t2,<br>
+          &nbsp; &nbsp; title={M2T2: Multi-Task Masked Transformer for Object-centric Pick and Place},<br>
+          &nbsp; &nbsp; author={Yuan, Wentao and Murali, Adithyavairavan and Mousavian, Arsalan and Fox, Dieter},<br>
+          &nbsp; &nbsp; booktitle={7th Annual Conference on Robot Learning},<br>
+          &nbsp; &nbsp; year={2023}<br>
+        }
+      </div>
     </div>
 
   </body>
